@@ -18,7 +18,7 @@ public class MainManager : MonoBehaviour
     
     private bool m_GameOver = false;
 
-    
+    private MainSettings m_Settings;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +36,7 @@ public class MainManager : MonoBehaviour
                 brick.onDestroyed.AddListener(AddPoint);
             }
         }
+        m_Settings = GameObject.Find("Settings").GetComponent<MainSettings>();
     }
 
     private void Update()
@@ -70,7 +71,9 @@ public class MainManager : MonoBehaviour
 
     public void GameOver()
     {
+        m_Settings.HighScoreUpdate(m_Points,m_Settings.nickName);
         m_GameOver = true;
         GameOverText.SetActive(true);
+
     }
 }
