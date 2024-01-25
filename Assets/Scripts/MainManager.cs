@@ -38,7 +38,8 @@ public class MainManager : MonoBehaviour
             }
         }
         m_Settings = GameObject.Find("Settings").GetComponent<MainSettings>();
-        highScoreText.text = "Best Score : " + m_Settings.highScoreName + " : " + m_Settings.highScore;
+        (int highscore, string highscorename) = (m_Settings.LoadHighScore());
+        highScoreText.text = "Best Score : " + highscorename + " : " + highscore;
     }
 
     private void Update()
