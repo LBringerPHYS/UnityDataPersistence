@@ -704,7 +704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2574f5f2fab9b554881a2b9c0c78fc0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameInput: {fileID: 1619793034}
   nickName: 
   highScore: 0
   highScoreName: 
